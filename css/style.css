@@ -31,6 +31,15 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 1.6rem;
   margin-bottom: 100px;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  width: 8px;
+  background: var(--light-one);
+}
+body::-webkit-scrollbar-thumb {
+  background: #172e80;
+  border-radius: 1rem;
 }
 header {
   margin-bottom: 8rem;
@@ -235,6 +244,8 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  gap: 2rem;
+  margin-bottom: 7rem;
 }
 .brand--logo--img {
   width: 100px;
@@ -244,4 +255,19 @@ nav {
 }
 .brand--logo--img:nth-child(4) {
   width: 95px;
+}
+/* users counter section */
+.users--counter--section {
+  padding: 0 8rem;
+}
+.users--counter--section--context {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 4rem;
+  color: var(--main-color);
+  font-weight: 700;
+  width: 55%;
+}
+.users--count {
+  color: var(--minor-color);
 }

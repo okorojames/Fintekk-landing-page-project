@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--  -->
+    <!-- aos css -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Fintekk</title>
   </head>
@@ -33,7 +34,11 @@
       <div class="home--page">
         <div class="home--page--row">
           <!-- home page col 1 -->
-          <div class="home--page--col--1">
+          <div
+            class="home--page--col--1"
+            data-aos="zoom-in-up"
+            data-aos-duration="1200"
+          >
             <h2 class="home--page--col--1--h2">
               Pay, Invest, Save Your Cash with a single Bank
             </h2>
@@ -62,7 +67,11 @@
             </div>
           </div>
           <!-- home page col 2 -->
-          <div class="home--page--col--2">
+          <div
+            class="home--page--col--2"
+            data-aos="flip-right"
+            data-aos-duration="1200"
+          >
             <img src="img/img-1.png" class="home--page--img" alt="" />
             <div class="blue--circle--one"></div>
             <div class="blue--circle--two"></div>
@@ -135,8 +144,24 @@
       <img src="img/img-10.png" alt="" class="brand--logo--img" />
       <img src="img/img-11.png" alt="" class="brand--logo--img" />
     </section>
+    <!-- users counter section -->
+    <section class="users--counter--section">
+      <div class="users--counter--section--context">
+        More than <span class="users--count">10,000</span> active users trust
+        Fintekk
+      </div>
+    </section>
     <!-- jquery -->
     <script src="js/jquery.js"></script>
+    <!-- waypoint -->
+    <script src="js/waypoint.js"></script>
+    <!-- counter js -->
+    <script src="js/jquery-counter.js"></script>
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <!-- js -->
     <script src="js/app.js"></script>
   </body>
