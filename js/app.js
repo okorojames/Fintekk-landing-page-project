@@ -1,7 +1,7 @@
 // loading gif code
 $(window).on("load", function () {
-  $(".loading--gif--icon").delay(1000).fadeOut();
-  $(".loading--gif--container").delay(1200).fadeOut();
+  $(".loading--gif--icon").delay(600).fadeOut();
+  $(".loading--gif--container").delay(700).fadeOut();
 });
 // active users counter jquery code.
 $(".users--count").counterUp({
@@ -56,3 +56,17 @@ testimonial_number_three.addEventListener("click", function () {
 // footer copyright code.
 const copyright = document.querySelector(".copyright");
 copyright.textContent = `${new Date().getFullYear()}`;
+//
+// nav toggle code
+//
+const hamburger = document.querySelector(".hamburger");
+const nav_links = document.querySelector(".nav--links");
+const burger_one = document.querySelector(".burger--one");
+const burger_two = document.querySelector(".burger--two");
+const burger_three = document.querySelector(".burger--three");
+hamburger.addEventListener("click", function () {
+  nav_links.classList.toggle("nav--links--toggle");
+  burger_one.classList.toggle("burger--toggle");
+  burger_two.classList.toggle("burger--toggle");
+  burger_three.classList.toggle("burger--toggle");
+});

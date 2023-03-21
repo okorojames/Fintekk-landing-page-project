@@ -61,6 +61,7 @@ header {
 }
 /* nav styling */
 nav {
+  position: relative;
   padding: 2rem 8rem;
   display: flex;
   justify-content: space-between;
@@ -123,6 +124,21 @@ nav {
   box-shadow: 0 0 0 1.5px var(--main-color);
   color: var(--minor-color);
   background: transparent;
+}
+/* hamburger */
+.hamburger {
+  display: none;
+}
+.burger {
+  background: var(--minor-color);
+  border-radius: 1rem;
+  height: 3px;
+  width: 40px;
+  margin-top: 8px;
+  transition: 0.6s;
+}
+.burger:first-child {
+  margin-top: 0;
 }
 /*  */
 /*  */
@@ -261,6 +277,7 @@ nav {
   justify-content: space-around;
   gap: 2rem;
   margin-bottom: 7rem;
+  flex-wrap: wrap;
 }
 .brand--logo--img {
   width: 100px;
@@ -318,6 +335,7 @@ nav {
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   align-items: stretch;
+  gap: 2rem;
 }
 .our--services-card {
   max-width: 30rem;
@@ -485,6 +503,7 @@ nav {
   border-radius: 0.8rem;
   padding: 1rem 0.8rem;
   position: absolute;
+  width: 100%;
   /* top: 68%; */
   top: -10px;
   left: 0;
@@ -522,6 +541,7 @@ nav {
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   align-items: center;
+  gap: 1rem;
 }
 .testimonial--section--col--2 {
   width: 100%;
@@ -700,4 +720,185 @@ nav {
 }
 .footer--link {
   color: var(--minor-color);
+}
+/*  */
+/*  */
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+/*  */
+/*  */
+@media screen and (max-width: 940px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media screen and (max-width: 924px) {
+  .faq--section--rows {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 920px) {
+  html {
+    font-size: 62.5%;
+  }
+  nav {
+    box-shadow: 0 1.5px 8px rgba(46, 91, 255, 0.212);
+  }
+  .nav--logo {
+    font-size: 2.4rem;
+  }
+  .nav--links {
+    position: fixed;
+    padding: 2rem 3rem;
+    background: var(--light-one);
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    top: 65px;
+    right: -2000px;
+    width: 50%;
+    height: 100%;
+    z-index: 999;
+    box-shadow: 0 1.5px 9px rgba(46, 91, 255, 0.27);
+    transition: 0.6s;
+  }
+  .nav--link {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .nav--link--btns {
+    flex-direction: column;
+  }
+  .hamburger {
+    cursor: pointer;
+    display: block;
+  }
+  /* home page */
+  .home--page--row {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .home--page--col--1 {
+    text-align: center;
+  }
+  .home--page--get--btns {
+    justify-content: center;
+  }
+  .users--counter--section--context {
+    width: 95%;
+  }
+  .users--counter--section,
+  .home--page,
+  .cta--section,
+  .faq--section,
+  .testimonial--section,
+  .brand--logos--section,
+  .figure--article--section,
+  .our--services--section {
+    padding: 0 4rem;
+  }
+  nav {
+    padding: 1rem 5rem;
+  }
+  .footer--section {
+    padding: 4rem 4rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+  .home--page--get--btns {
+    flex-direction: column;
+  }
+  .our--services--card--row {
+    grid-template-columns: 1fr;
+  }
+  .our--services--card--image {
+    width: 100%;
+  }
+  .figure--article--rows {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .figure--article--first--context {
+    text-align: center;
+  }
+  .testimonial--section--rows {
+    grid-template-columns: 1fr;
+  }
+  .testionial--section--col--1 {
+    text-align: center;
+  }
+  .footer--section--col--2 {
+    grid-template-columns: repeat(2, 1fr);
+    justify-self: center;
+  }
+  .footer--links--rows {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.3rem;
+  }
+}
+@media screen and (max-width: 684px) {
+  .footer--section--col--1 {
+    text-align: center;
+  }
+  .footer--section--rows {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+  .footer--section--col--2 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 590px) {
+  nav {
+    padding: 0.8rem 1rem;
+  }
+  .faq--section {
+    padding: 0;
+  }
+  .faq--section--col--1 {
+    justify-self: start;
+    margin: 0 auto;
+  }
+  .home--page--col--2 {
+    width: 280px;
+  }
+  .our--services--context {
+    width: 90%;
+  }
+  .cta--form {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 464px) {
+  .footer--section--col--2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 374px) {
+  .footer--section--col--2 {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+/*  */
+/*  */
+/* last styling for the mobile nav */
+/*  */
+/*  */
+.nav--links--toggle.nav--links {
+  right: 0;
+}
+.burger--toggle.burger--one {
+  transform: rotate(-45deg) translate(0, 5px);
+}
+.burger--toggle.burger--two {
+  display: none;
+}
+.burger--toggle.burger--three {
+  transform: rotate(45deg) translate(0, -5px);
 }
