@@ -53,3 +53,6 @@ testimonial_number_three.addEventListener("click", function () {
   testimonial_card_two.classList.remove("testimonial--card--active");
   testimonial_card_three.classList.add("testimonial--card--active");
 });
+// footer copyright code.
+const copyright = document.querySelector(".copyright");
+copyright.textContent = `${new Date().getFullYear()}`;
