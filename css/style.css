@@ -57,7 +57,9 @@ body::-webkit-scrollbar-thumb {
   width: 120px;
 }
 header {
+  margin: 0 auto;
   margin-bottom: 8rem;
+  width: 100%;
 }
 /* nav styling */
 nav {
@@ -735,6 +737,10 @@ nav {
   .faq--section--rows {
     grid-template-columns: 1fr;
   }
+  .faq--section--col--2 {
+    justify-self: start;
+    width: 100%;
+  }
 }
 @media screen and (max-width: 920px) {
   html {
@@ -788,7 +794,6 @@ nav {
     width: 95%;
   }
   .users--counter--section,
-  .home--page,
   .cta--section,
   .faq--section,
   .testimonial--section,
@@ -796,6 +801,9 @@ nav {
   .figure--article--section,
   .our--services--section {
     padding: 0 4rem;
+  }
+  .home--page {
+    padding: 0;
   }
   nav {
     padding: 1rem 5rem;
@@ -820,6 +828,9 @@ nav {
   .figure--article--rows {
     grid-template-columns: 1fr;
     gap: 3rem;
+  }
+  .figure--article--img-container {
+    width: 100%;
   }
   .figure--article--first--context {
     text-align: center;
@@ -880,6 +891,9 @@ nav {
 @media screen and (max-width: 464px) {
   .footer--section--col--2 {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .home--page--col--2 {
+    width: 200px;
   }
 }
 @media screen and (max-width: 374px) {
